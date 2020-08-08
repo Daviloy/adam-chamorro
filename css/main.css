@@ -1,0 +1,713 @@
+/* Roboto Condensed Font */
+@font-face{
+    font-family: 'Roboto Condensed';
+    font-family: 400;
+    src: url('../fonts/roboto-condensed.light.ttf');
+}
+
+/* Louis George Cafe Font */
+@font-face{
+    font-family: 'Louis George Cafe Bold';
+    font-weight: 700;
+    src: url('../fonts/louis-george-cafe-bold.ttf');
+}
+
+/* Variables */
+:root{
+    --dark-grey: #606060;
+    --light-grey: #aaa;
+    --primary-color: #437FC7;
+    --secondary-color: #6daffe;
+}
+
+.progress-bars{
+    --progress-bar-color: rgb(255, 127, 80);
+}
+
+.social-profiles{
+    --facebook-brand: #3b5998;
+    --pinterest-brand: #cc2127;
+    --twitter-brand: #55acee;
+}
+
+/* CSS Reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: var(--dark-grey);
+    font: 400 1rem/1.7em 'Raleway', sans-serif;
+}
+
+header, footer, section, nav, details, summary, article, aside, main{
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0.6rem 0;
+}
+
+p{
+    margin: 0.6rem 0;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Utility Classes */
+.container{
+    margin: auto;
+    max-width: 1100px;
+}
+
+.hide-desktop{
+    display: none;
+}
+
+.show-desktop{
+    display: block;
+}
+
+.text-primary{
+    color: var(--primary-color);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-upper{
+    text-transform: uppercase;
+}
+
+.l-heading{
+    font-size: 4rem;
+    letter-spacing: 3px;
+}
+
+.m-heading{
+    font-size: 2.5rem;
+}
+
+.btn{
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    transition: all 0.6s ease-in;
+}
+
+.btn-block{
+    display: block;
+    width: 100%;
+}
+
+.btn-lg{
+    padding: 1rem 3rem;
+    width: 200px;
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover{
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+.py-1{padding: 1rem 0;}
+.py-2{padding: 2rem 0;}
+.py-3{padding: 3rem 0;}
+
+/* Navigation Menu Slide Animation */
+.nav-slide-up{
+    transform: translateY(-150px);
+    transition: transform 0.6s ease-in-out;
+    opacity: 0.9;
+}
+
+.nav-slide-down{
+    transform: translateY(0px);
+    transition: transform 0.6s ease-in-out;
+    opacity: 1;
+}
+
+/* Navbar */
+#navbar{
+    background-color: #fff;
+    box-shadow: 0px 1px 3px 3px var(--light-grey);
+    padding: 0.9rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+#navbar #logo a{
+    color: var(--dark-grey);
+    font-family: 'Louis George Cafe Bold';
+    font-weight: 900;
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#navbar #logo a:hover{
+    opacity: 0.8;
+}
+
+#navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar #nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#navbar #nav-menu li{
+    padding: 0.625rem 1rem;
+}
+
+#navbar #nav-menu li a{
+    color: var(--dark-grey);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+#navbar #nav-menu li a:hover,
+#navbar #nav-menu li a.active{
+    color: var(--primary-color);
+}
+
+/* Site Header */
+#site-header{
+    background: url('../img/home-bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+#site-header .header-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    line-height: 1.2;
+    margin: auto;
+    max-width: 60vw;
+    padding: 1.125rem;
+}
+
+#site-header .header-content h2{
+    color: var(--dark-grey);
+    font-size: 60px;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 1px var(--dark-grey);
+}
+
+#site-header .header-content h3{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.125rem;
+}
+
+#site-header .header-content p{
+    line-height: 1.5;
+    margin-bottom: 2.3rem;
+}
+
+#site-header .header-content .btn{
+    box-shadow: 0px 4px 5px 1px rgba(51, 51, 51, 0.3);
+}
+
+/* My Work */
+#work{
+    padding: 7.25rem 0;
+}
+
+#work h2{
+    padding-left: 5rem;
+}
+
+#work .work-inner{
+    display: flex;
+    margin-top: 3rem;
+}
+
+.work-inner .work-item{
+    border: 1px solid var(--light-grey);
+    margin: 1rem;
+    padding: 90px 1.25rem;
+    text-align: center;
+    flex: 1;
+    transition: border 0.6s ease-in-out;
+}
+
+.work-inner .work-item:hover{
+    border: 1px solid var(--primary-color);
+}
+
+.work-inner .work-item i{
+    color: var(--dark-grey);
+    font-size: 60px;
+}
+
+.work-inner .work-item h3{
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin: 2.6rem 0 1.5rem 0;
+}
+
+.work-inner .work-item hr{
+    border-top: 1px solid #eee;
+    display: inline-block;
+    margin-bottom: 1.3rem;
+    width: 100px;
+}
+
+.work-inner .work-item p{
+    padding: 0 28px;
+    line-height: 28px;
+}
+
+/* Portfolio */
+#portfolio{
+    background: #f8f8f8;
+    padding-top: 5rem;
+}
+
+#portfolio h2{
+    margin-bottom: 3rem;
+}
+
+#portfolio h2::after{
+    content: "";
+    background: #aaa;
+    display: block;
+    width: 100px;
+    height: 1px;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+#portfolio img{
+    display: block;
+    width: 100%;
+}
+
+#portfolio .portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.portfolio-grid > div{
+    position: relative;
+}
+
+.portfolio-grid > div .portfolio-overlay{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+    padding: 0 40px;
+    position: absolute;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+
+.portfolio-grid > div .portfolio-overlay:hover{
+    opacity: 0.9;
+}
+
+.portfolio-grid > div .portfolio-overlay h3{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+/* Resume */
+#resume{
+    padding: 1rem 0 5rem 0;
+    padding-top: 100px;
+}
+
+#resume .container{
+    display: flex;
+}
+
+#resume .container > div{
+    flex: 1;
+}
+
+#resume .container > div h2{
+    margin-bottom: 4rem;
+}
+
+#resume .resume-profile p .info-label{
+    font-weight: bolder;
+    display: inline-block;
+    width: 100px;
+}
+
+#resume .resume-skills p{
+    margin-bottom: 1.2rem;
+}
+
+.resume-skills .progress-bars progress{
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    height: 5px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.resume-skills .progress-bars progress::-webkit-progress-bar{
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.resume-skills .progress-bars progress::-moz-progress-bar{
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.resume-skills .progress-bars progress::-ms-progress-bar{
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.resume-skills .progress-bars progress::-webkit-progress-value{
+    background-color: var(--progress-bar-color);
+    border-radius: 5px;
+}
+
+.resume-skills .progress-bars progress::-moz-progress-value{
+    background-color: var(--progress-bar-color);
+    border-radius: 5px;
+}
+
+.resume-skills .progress-bars progress::-ms-progress-value{
+    background-color: var(--progress-bar-color);
+    border-radius: 5px;
+}
+
+.resume-skills progress::before,
+.resume-skills progress::after{
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.resume-skills progress::before{
+    top: 0;
+    left: 0;
+}
+
+.resume-skills progress::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.resume-skills .progress-bars #progress-1::before{
+    content: "Creative Design";
+}
+
+.resume-skills .progress-bars #progress-1::after{
+    content: "80%";
+}
+
+.resume-skills .progress-bars #progress-2::before{
+    content: "Copyright Writing";
+}
+
+.resume-skills .progress-bars #progress-2::after{
+    content: "50%";
+}
+
+.resume-skills .progress-bars #progress-3::before{
+    content: "Web Design";
+}
+
+.resume-skills .progress-bars #progress-3::after{
+    content: "60%";
+}
+
+/* About */
+#about{
+    background: url('../img/about-bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+#about .about-bio{
+    display: flex;
+    padding-top: 2.5rem;
+    justify-content: flex-end;
+}
+
+#about .about-bio .about-content{
+    line-height: 1.2;
+    padding: 20px;
+    width: 50vw;
+}
+
+#about .about-bio .about-content .m-heading span,
+#about .about-bio .about-content h3 span{
+    font-weight: bold;
+}
+
+#about .about-bio .about-content h3{
+    background: #a9ddf2;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+    padding: 0.625rem;
+}
+
+#about .about-bio .about-content p{
+    line-height: 1.7;
+}
+
+/* Social Profiles */
+#about .social-profiles{
+    display: flex;
+    margin-top: 3.5rem;
+}
+
+#about .social-profiles .social-profile{
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    height: 250px;
+    justify-content: flex-start;
+    padding-left: 30px;
+    transition: background 0.5s ease-in-out;
+}
+
+#about .social-profiles .social-profile:hover{
+    background-color: #333 !important;
+}
+
+#about .social-profiles .social-profile h3{
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+}
+
+#about .social-profiles .social-profile p{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#about .social-profiles #facebook-profile{
+    background-color: var(--facebook-brand);
+}
+
+#about .social-profiles #twitter-profile{
+    background-color: var(--twitter-brand);
+}
+
+#about .social-profiles #pinterest-profile{
+    background-color: var(--pinterest-brand);
+}
+
+#about .social-profiles .social-profile i{
+    background-color: #fff;
+    border-radius: 50%;
+    color: #333;
+    height: 70px;
+    line-height: 70px;
+    margin-right: 20px;
+    text-align: center;
+    width: 70px;
+}
+
+/* Contact */
+#contact h2{
+    line-height: 1.1;
+    font-size: 4.5rem;
+    margin: 5rem 0;
+}
+
+#contact #contact-form{
+    margin: auto;
+    max-width: 900px;
+}
+
+#contact .form-group{
+    padding-bottom: 13px;
+}
+
+#contact #contact-form .input-col-2{
+    display: flex;
+}
+
+#contact #contact-form .input-col-2 .form-group{
+    flex: 1;
+}
+
+#contact #contact-form .input-col-2 .form-group:first-child{
+    margin-right: 30px;
+}
+
+#contact #contact-form input[type="text"],
+#contact #contact-form input[type="email"],
+#contact #contact-form textarea{
+    border: 1px solid var(--dark-grey);
+    border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    padding: 0.4rem 1rem;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+
+#contact #contact-form textarea{
+    height: 150px;
+}
+
+#contact form input:hover,
+#contact form input:focus,
+#contact form textarea:hover,
+#contact form textarea:focus{
+    background: var(--dark-grey);
+    color: #fff;
+}
+
+#contact #contact-form input:hover::placeholder,
+#contact #contact-form input:focus::placeholder,
+#contact #contact-form textarea:hover::placeholder
+#contact #contact-form textarea:focus::placeholder{
+    color: var(--light-grey);
+}
+
+#contact .btn{
+    background: none;
+    border: 1px solid var(--dark-grey);
+    color:  var(--dark-grey);
+    font-size: 14px;
+    margin: auto;
+    padding: 0.5rem 1rem;
+    width: 70%;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in;
+}
+
+#contact .btn:hover{
+    background: var(--dark-grey);
+    color: #fff;
+}
+
+/* Footer */
+#site-footer{
+    padding: 2rem 1.3rem;
+    text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 1130px){
+    #resume{
+        padding: 100px 20px 5rem 20px;
+    }
+
+    #navbar #logo{
+        padding: 0 5px;
+    }
+
+    #contact #contact-form{
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 1120px){
+    #portfolio .portfolio-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(min-width: 769px) and (max-width: 960px){
+    #about .social-profiles .social-profile{
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #about .social-profiles .social-profile h3{
+        margin-top: 1rem;
+    }
+}
+
+@media(max-width: 865px){
+    #site-header .header-content{
+        max-width: 90vw;
+    }
+}
+
+@media(max-width: 823px){
+    .work-inner .work-item p{
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 820px){
+    #portfolio .portfolio-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 810px){
+    #navbar #nav-menu li{
+        padding: 0.625rem;
+    }
+}
+
+@media(max-width: 806px){
+    #resume .container > div h2 {
+        font-size: 3.5rem;
+    }
+}
